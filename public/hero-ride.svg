@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4f9ff"/>
+      <stop offset="100%" stop-color="#d9ecf8"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#d7e7b9"/>
+      <stop offset="100%" stop-color="#b9d37b"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f0a449"/>
+      <stop offset="100%" stop-color="#cf6f28"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="440" rx="36" fill="url(#sky)"/>
+  <circle cx="535" cy="86" r="34" fill="#ffd46a"/>
+  <path d="M0 272C109 224 188 229 271 249C344 267 424 286 640 243V440H0Z" fill="url(#ground)"/>
+  <path d="M0 320C152 305 222 324 343 333C433 340 514 328 640 278V440H0Z" fill="#96bb63" opacity=".52"/>
+  <path d="M52 360C149 293 239 283 346 289C420 293 505 315 589 287" fill="none" stroke="url(#road)" stroke-linecap="round" stroke-width="18"/>
+  <path d="M143 286L212 212H285L337 315M212 212L257 266M285 212L325 160H382" fill="none" stroke="#163047" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+  <circle cx="142" cy="315" r="44" fill="none" stroke="#163047" stroke-width="12"/>
+  <circle cx="339" cy="315" r="44" fill="none" stroke="#163047" stroke-width="12"/>
+  <path d="M329 146H392" fill="none" stroke="#163047" stroke-linecap="round" stroke-width="12"/>
+  <circle cx="409" cy="134" r="13" fill="#163047"/>
+</svg>
