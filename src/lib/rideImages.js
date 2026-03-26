@@ -1,4 +1,10 @@
-const RIDE_IMAGE_PATHS = ["/rajdy/zdjecie1.jpg", "/rajdy/zdjecie2.jpg"];
+const BASE_URL = import.meta.env.BASE_URL || "/";
+
+function assetPath(path) {
+  return `${BASE_URL}${String(path).replace(/^\/+/, "")}`;
+}
+
+const RIDE_IMAGE_PATHS = [assetPath("rajdy/zdjecie1.jpg"), assetPath("rajdy/zdjecie2.jpg")];
 
 function normalizeName(value) {
   return String(value || "")
@@ -12,11 +18,11 @@ function normalizeName(value) {
 
 export function getRideImagePath(event, events = []) {
   if (!event) {
-    return "/hero-ride.svg";
+    return assetPath("hero-ride.svg");
   }
 
   if (!RIDE_IMAGE_PATHS.length) {
-    return "/hero-ride.svg";
+    return assetPath("hero-ride.svg");
   }
 
   const eventCandidates = [event.name, event.id, event.shortName].map(normalizeName).filter(Boolean);
