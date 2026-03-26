@@ -704,6 +704,7 @@ function App() {
   const previousTotalRef = useRef(0);
   const importInputRef = useRef(null);
   const signupSectionRef = useRef(null);
+  const contentRef = useRef(null);
 
   const formErrors = useMemo(() => validateParticipant(form), [form]);
   const adminFormErrors = useMemo(() => validateParticipant(adminForm), [adminForm]);
@@ -940,6 +941,13 @@ function App() {
   function handleSectionChange(nextSection) {
     setSection(nextSection);
     setMobileMenuOpen(false);
+
+    window.requestAnimationFrame(() => {
+      contentRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
   }
 
   function handleOpenSignup() {
@@ -1604,7 +1612,7 @@ function App() {
           </section>
         </header>
 
-        <main className="content">
+        <main ref={contentRef} className="content">
           {section === APP_SECTIONS.signup ? (
             <section ref={signupSectionRef} className="main-grid main-grid--single">
               {hasActiveEvent ? (
