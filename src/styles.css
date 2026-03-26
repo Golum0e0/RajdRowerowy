@@ -1464,19 +1464,22 @@ tbody tr:hover {
 }
 
 @media (max-width: 860px) {
+  .topbar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
 
   .nav-links {
-    position: absolute;
-    z-index: 9;
-    top: calc(100% + 12px);
-    right: 0;
+    position: static;
     display: none;
     flex-direction: column;
     align-items: stretch;
-    min-width: 240px;
+    width: 100%;
+    margin-top: 12px;
     padding: 12px;
     border-radius: 22px;
     background: rgba(13, 28, 42, 0.96);
@@ -1486,6 +1489,11 @@ tbody tr:hover {
 
   .nav-links.is-open {
     display: flex;
+  }
+
+  .nav-links button {
+    width: 100%;
+    justify-content: center;
   }
 
   .form-grid,
